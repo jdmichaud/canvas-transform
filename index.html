@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas transform</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:;base64,="> <!-- Prevent request to favicon -->
+  <script src="http://www.unpkg.com/@jdmichaud/observable@0.5.6/dist/index.umd.js"></script>
+  <script src="main.js"></script>
+  <style type="text/css">
+    #canvas-container {
+      display: flex;
+    }
+    .control {
+      display: flex;
+      align-items: baseline;
+    }
+    #control-container {
+      max-width: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .value {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+    <div><img id="src" src="awesomeface.png" width=512 height=512></img></div>
+    <div><canvas id="dest" width=256 height=256></canvas></div>
+  </div>
+  <div id="control-container">
+    <div class="control"><input type="range" id="a" name="a" min="0" max="2" step="0.1"/><label for="a">a</label><span class="value" id="a-value"></span></div>
+    <div class="control"><input type="range" id="d" name="d" min="0" max="2" step="0.1"/><label for="d">d</label><span class="value" id="d-value"></span></div>
+    <div class="control"><input type="range" id="b" name="b" min="0" max="2" step="0.1"/><label for="b">b</label><span class="value" id="b-value"></span></div>
+    <div class="control"><input type="range" id="c" name="c" min="0" max="2" step="0.1"/><label for="c">c</label><span class="value" id="c-value"></span></div>
+    <div class="control"><input type="range" id="e" name="e" min="-512" max="512" step="1"/><label for="e">e</label><span class="value" id="e-value"></span></div>
+    <div class="control"><input type="range" id="f" name="f" min="-512" max="512" step="1"/><label for="f">f</label><span class="value" id="f-value"></span></div>
+  </div>
+</body>
+</html>
